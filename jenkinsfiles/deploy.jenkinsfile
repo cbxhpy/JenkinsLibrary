@@ -9,8 +9,9 @@ def gitlab = new org.devops.gitlab()
 def k8s = new org.devops.kubernetes()
 
 pipeline{
-   agent { node { label "build" }}
-   
+//    agent { node { label "build" }}
+   agent any
+
    stages{
    
        stage("Deploy"){
